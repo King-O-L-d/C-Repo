@@ -98,5 +98,10 @@ namespace Project1
             frmQuanLy.isEditting = false;
             frmQuanLy.ShowDialog();
         }
+
+        private void dkTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

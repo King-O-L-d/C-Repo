@@ -28,84 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmQuanLyUser_Main));
             System.Windows.Forms.DataGridView dgvUser;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmQuanLyUser_Main));
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colHoVaTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNhoMatKhau = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripNapLai = new System.Windows.Forms.ToolStripButton();
             this.actionAdd = new System.Windows.Forms.ToolStripButton();
             this.actionUpdate = new System.Windows.Forms.ToolStripButton();
             this.actionDelete = new System.Windows.Forms.ToolStripButton();
             this.actionQuit = new System.Windows.Forms.ToolStripLabel();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colHoVaTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNhoMatKhau = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             dgvUser = new System.Windows.Forms.DataGridView();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(dgvUser)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(17, 17);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripNapLai,
-            this.actionAdd,
-            this.actionUpdate,
-            this.actionDelete,
-            this.actionQuit});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
-            this.toolStrip1.TabIndex = 3;
-            this.toolStrip1.Text = "Nạp Lại";
-            // 
-            // toolStripNapLai
-            // 
-            this.toolStripNapLai.Image = ((System.Drawing.Image)(resources.GetObject("toolStripNapLai.Image")));
-            this.toolStripNapLai.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripNapLai.Name = "toolStripNapLai";
-            this.toolStripNapLai.Size = new System.Drawing.Size(65, 22);
-            this.toolStripNapLai.Text = "Nạp lại";
-            // 
-            // actionAdd
-            // 
-            this.actionAdd.Image = ((System.Drawing.Image)(resources.GetObject("actionAdd.Image")));
-            this.actionAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.actionAdd.Name = "actionAdd";
-            this.actionAdd.Size = new System.Drawing.Size(58, 22);
-            this.actionAdd.Text = "Thêm";
-            this.actionAdd.Click += new System.EventHandler(this.ActionAdd_Click);
-            // 
-            // actionUpdate
-            // 
-            this.actionUpdate.Image = ((System.Drawing.Image)(resources.GetObject("actionUpdate.Image")));
-            this.actionUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.actionUpdate.Name = "actionUpdate";
-            this.actionUpdate.Size = new System.Drawing.Size(47, 22);
-            this.actionUpdate.Text = "Sửa";
-            // 
-            // actionDelete
-            // 
-            this.actionDelete.Image = ((System.Drawing.Image)(resources.GetObject("actionDelete.Image")));
-            this.actionDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.actionDelete.Name = "actionDelete";
-            this.actionDelete.Size = new System.Drawing.Size(48, 22);
-            this.actionDelete.Text = "Xóa";
-            // 
-            // actionQuit
-            // 
-            this.actionQuit.Name = "actionQuit";
-            this.actionQuit.Size = new System.Drawing.Size(37, 22);
-            this.actionQuit.Text = "Thoát";
-            this.actionQuit.Click += new System.EventHandler(this.ActionQuit_Click);
             // 
             // dgvUser
             // 
             dgvUser.AllowUserToAddRows = false;
             dgvUser.AllowUserToDeleteRows = false;
             dgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dgvUser.BackgroundColor = System.Drawing.Color.Azure;
             dgvUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -169,6 +115,61 @@
             this.colNhoMatKhau.ReadOnly = true;
             this.colNhoMatKhau.TrueValue = "True";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(17, 17);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripNapLai,
+            this.actionAdd,
+            this.actionUpdate,
+            this.actionDelete,
+            this.actionQuit});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.TabIndex = 3;
+            this.toolStrip1.Text = "Nạp Lại";
+            // 
+            // toolStripNapLai
+            // 
+            this.toolStripNapLai.Image = ((System.Drawing.Image)(resources.GetObject("toolStripNapLai.Image")));
+            this.toolStripNapLai.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripNapLai.Name = "toolStripNapLai";
+            this.toolStripNapLai.Size = new System.Drawing.Size(65, 22);
+            this.toolStripNapLai.Text = "Nạp lại";
+            // 
+            // actionAdd
+            // 
+            this.actionAdd.Image = ((System.Drawing.Image)(resources.GetObject("actionAdd.Image")));
+            this.actionAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.actionAdd.Name = "actionAdd";
+            this.actionAdd.Size = new System.Drawing.Size(58, 22);
+            this.actionAdd.Text = "Thêm";
+            this.actionAdd.Click += new System.EventHandler(this.ActionAdd_Click);
+            // 
+            // actionUpdate
+            // 
+            this.actionUpdate.Image = ((System.Drawing.Image)(resources.GetObject("actionUpdate.Image")));
+            this.actionUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.actionUpdate.Name = "actionUpdate";
+            this.actionUpdate.Size = new System.Drawing.Size(47, 22);
+            this.actionUpdate.Text = "Sửa";
+            // 
+            // actionDelete
+            // 
+            this.actionDelete.Image = ((System.Drawing.Image)(resources.GetObject("actionDelete.Image")));
+            this.actionDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.actionDelete.Name = "actionDelete";
+            this.actionDelete.Size = new System.Drawing.Size(48, 22);
+            this.actionDelete.Text = "Xóa";
+            // 
+            // actionQuit
+            // 
+            this.actionQuit.Name = "actionQuit";
+            this.actionQuit.Size = new System.Drawing.Size(37, 22);
+            this.actionQuit.Text = "Thoát";
+            this.actionQuit.Click += new System.EventHandler(this.ActionQuit_Click);
+            // 
             // FrmQuanLyUser_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,9 +180,9 @@
             this.Name = "FrmQuanLyUser_Main";
             this.Text = "FrmQuanLyUser";
             this.Load += new System.EventHandler(this.FrmQuanLyUser_Main_Load);
+            ((System.ComponentModel.ISupportInitialize)(dgvUser)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(dgvUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
