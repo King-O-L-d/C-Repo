@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.txtId = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textID = new System.Windows.Forms.TextBox();
+            this.textUserName = new System.Windows.Forms.TextBox();
             this.txtTaiKhoan = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textPassword = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textName = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.Label();
             this.chkMatKhau = new System.Windows.Forms.CheckBox();
             this.applyButton = new System.Windows.Forms.Button();
@@ -54,21 +54,22 @@
             this.txtId.Text = "ID";
             this.txtId.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // textID
             // 
-            this.textBox1.Location = new System.Drawing.Point(243, 89);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(547, 35);
-            this.textBox1.TabIndex = 1;
+            this.textID.Enabled = false;
+            this.textID.Location = new System.Drawing.Point(243, 89);
+            this.textID.Margin = new System.Windows.Forms.Padding(7);
+            this.textID.Name = "textID";
+            this.textID.Size = new System.Drawing.Size(547, 35);
+            this.textID.TabIndex = 1;
             // 
-            // textBox2
+            // textUserName
             // 
-            this.textBox2.Location = new System.Drawing.Point(243, 157);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(7);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(547, 35);
-            this.textBox2.TabIndex = 3;
+            this.textUserName.Location = new System.Drawing.Point(243, 157);
+            this.textUserName.Margin = new System.Windows.Forms.Padding(7);
+            this.textUserName.Name = "textUserName";
+            this.textUserName.Size = new System.Drawing.Size(547, 35);
+            this.textUserName.TabIndex = 3;
             // 
             // txtTaiKhoan
             // 
@@ -81,13 +82,13 @@
             this.txtTaiKhoan.TabIndex = 2;
             this.txtTaiKhoan.Text = "Tài Khoản";
             // 
-            // textBox3
+            // textPassword
             // 
-            this.textBox3.Location = new System.Drawing.Point(243, 231);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(7);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(547, 35);
-            this.textBox3.TabIndex = 5;
+            this.textPassword.Location = new System.Drawing.Point(243, 231);
+            this.textPassword.Margin = new System.Windows.Forms.Padding(7);
+            this.textPassword.Name = "textPassword";
+            this.textPassword.Size = new System.Drawing.Size(547, 35);
+            this.textPassword.TabIndex = 5;
             // 
             // txtMatKhau
             // 
@@ -100,13 +101,13 @@
             this.txtMatKhau.TabIndex = 4;
             this.txtMatKhau.Text = "Mật Khẩu";
             // 
-            // textBox4
+            // textName
             // 
-            this.textBox4.Location = new System.Drawing.Point(243, 306);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(7);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(547, 35);
-            this.textBox4.TabIndex = 7;
+            this.textName.Location = new System.Drawing.Point(243, 306);
+            this.textName.Margin = new System.Windows.Forms.Padding(7);
+            this.textName.Name = "textName";
+            this.textName.Size = new System.Drawing.Size(547, 35);
+            this.textName.TabIndex = 7;
             // 
             // txtHoTen
             // 
@@ -140,7 +141,7 @@
             this.applyButton.TabIndex = 9;
             this.applyButton.Text = "Xác Nhận";
             this.applyButton.UseVisualStyleBackColor = false;
-            this.applyButton.Click += new System.EventHandler(this.ApplyButton_Click);
+            this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
             // 
             // button2
             // 
@@ -174,13 +175,13 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.applyButton);
             this.Controls.Add(this.chkMatKhau);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textName);
             this.Controls.Add(this.txtHoTen);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textPassword);
             this.Controls.Add(this.txtMatKhau);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textUserName);
             this.Controls.Add(this.txtTaiKhoan);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textID);
             this.Controls.Add(this.txtId);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(7);
@@ -198,12 +199,12 @@
         
 
         private System.Windows.Forms.Label txtId;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textID;
+        private System.Windows.Forms.TextBox textUserName;
         private System.Windows.Forms.Label txtTaiKhoan;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textPassword;
         private System.Windows.Forms.Label txtMatKhau;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.Label txtHoTen;
         private System.Windows.Forms.CheckBox chkMatKhau;
         private System.Windows.Forms.Button applyButton;

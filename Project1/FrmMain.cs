@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project1.Data_Layer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +19,7 @@ namespace Project1
         public FrmMain()
         {
             Instance = this;
-            userDataPath = string.Format(@"{0}user.init", Application.StartupPath);
+            userDataPath = string.Format(@"{0}/user.init", Application.StartupPath);
             InitializeComponent();
         }
 
@@ -31,7 +32,12 @@ namespace Project1
         {
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.ShowDialog();
-            lblTaiKhoan.Text = string.Format("Hệ thống đăng nhập bởi: {0}", ClsMain.taiKhoan);
+            
+        }
+
+        public void SetUserInfo(User user)
+        {
+            lblTaiKhoan.Text = string.Format("Hệ thống đăng nhập bởi: {0}", user.HoVaTen);
 
             lblThoiGian.Text = string.Format("Thời gian: {0:dd/MM/yyyy HH:mm:ss}", DateTime.Now);
         }

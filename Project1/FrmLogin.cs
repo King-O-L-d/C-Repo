@@ -1,4 +1,5 @@
 ﻿using Project1.BusinessLayer;
+using Project1.Data_Layer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,9 +39,11 @@ namespace Project1
             {
                 if (!string.IsNullOrEmpty(txtMatKhau.Text))
                 {
-                    if (KiemTraDangNhap(txtTaiKhoan.Text, txtMatKhau.Text))
+                    User user = KiemTraDangNhap(txtTaiKhoan.Text, txtMatKhau.Text);
+                    if (user != null)
                     {
                         trangThaiDongForm = true;
+                        FrmMain.Instance.SetUserInfo(user);
                         this.Close();
                     }
                     else
@@ -72,11 +75,12 @@ namespace Project1
         /// <param name="txtTaiKhoan">txtTaiKhoan</param>
         /// <param name="txtMatKhau">txtMatKhau</param>
         /// <returns></returns>
-        private bool KiemTraDangNhap(string txtTaiKhoan, string txtMatKhau)
+        private User KiemTraDangNhap(string txtTaiKhoan, string txtMatKhau)
         {
-            if (bllUser.LoginCheck(txtTaiKhoan, txtMatKhau))
-                return true;
-            return false;
+            bllUser = new BLLUser(FrmMain.Instance.userDataPath);
+            User user = bllUser.LoginCheck(txtTaiKhoan, txtMatKhau);
+
+            return user;
         }
      private   bool trangThaiDongForm = false;
 
@@ -94,7 +98,7 @@ namespace Project1
 
         private void register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FrmQuanLyUser_Modifiles frmQuanLy = new FrmQuanLyUser_Modifiles();
+            FrmQuanLyUser_Modifiles frmQuanLy = new FrmQuanLyUser_Modifiles(null);
             frmQuanLy.isEditting = false;
             frmQuanLy.ShowDialog();
         }

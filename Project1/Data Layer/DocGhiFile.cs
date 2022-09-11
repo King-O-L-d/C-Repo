@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Project1.Data_Layer
 {
@@ -18,7 +19,7 @@ namespace Project1.Data_Layer
         public List<User> DocUser()
         {
             List<User> users = null;//Khai bao danh sach User
-            using (FileStream fileStream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.Read))
+            using (FileStream fileStream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read))
             {
                 using (StreamReader streamReader = new StreamReader(fileStream))
                 {
@@ -32,7 +33,7 @@ namespace Project1.Data_Layer
                             user = new User();//khoi tao mot user
                                               // users.Add(user.DocUser(line));
                             string[] mang = line.Split(',');
-                            user.ID = Convert.ToInt32(mang[0]);
+                            user.ID = Convert.ToInt64(mang[0]);
                             user.TaiKhoan = mang[1];
                             user.MatKhau = mang[2];
                             user.HoVaTen = mang[3];
@@ -40,7 +41,10 @@ namespace Project1.Data_Layer
                             users.Add(user);//Them user vao danh sach
                         }
                     }
+                    streamReader.Close();
                 }
+
+                fileStream.Close();
             }
             return users;
         }
@@ -51,6 +55,7 @@ namespace Project1.Data_Layer
             {
                 using (FileStream fileStream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write))
                 {
+                    fileStream.SetLength(0);
                     using (StreamWriter streamWrite = new StreamWriter(fileStream))
                     {
                         foreach (User item in users)
@@ -58,12 +63,16 @@ namespace Project1.Data_Layer
                             // item.GhiUser(streamWrite);
                             streamWrite.WriteLine(string.Format("{0},{1},{2},{3},{4}", item.ID, item.TaiKhoan, item.MatKhau, item.HoVaTen, item.NhoMatKhau));
                         }
+
+                        streamWrite.Close();
                     }
+                    fileStream.Close();
                 }
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                MessageBox.Show(e.Message);
                 return false;
             }
 
