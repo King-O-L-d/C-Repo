@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>C:\Users\Ton\Downloads\DevComponents.DotNetBar2 (1)\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -56,37 +59,70 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMain.cs">
+    <Compile Include="FrmQuanLyLH_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMain.Designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
+    <Compile Include="FrmQuanLyLH_Main.Designer.cs">
+      <DependentUpon>FrmQuanLyLH_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmQuanLyUser_Main.cs">
+    <Compile Include="FrmQuanLySV_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmQuanLyUser_Main.Designer.cs">
-      <DependentUpon>FrmQuanLyUser_Main.cs</DependentUpon>
+    <Compile Include="FrmQuanLySV_Main.Designer.cs">
+      <DependentUpon>FrmQuanLySV_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmQuanLyUser_Modifiles.cs">
+    <Compile Include="FrmQuanLyLH_Modifiles .cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmQuanLyUser_Modifiles.Designer.cs">
-      <DependentUpon>FrmQuanLyUser_Modifiles.cs</DependentUpon>
+    <Compile Include="FrmQuanLyLH_Modifiles .Designer.cs">
+      <DependentUpon>FrmQuanLyLH_Modifiles .cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLySV_Modifiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLySV_Modifiles.Designer.cs">
+      <DependentUpon>FrmQuanLySV_Modifiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_XuLiNgonNgu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frm_XuLiNgonNgu.Designer.cs">
+      <DependentUpon>Frm_XuLiNgonNgu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Frm_ChangePassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frm_ChangePassword.Designer.cs">
+      <DependentUpon>Frm_ChangePassword.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
+    <EmbeddedResource Include="FrmQuanLyLH_Main.resx">
+      <DependentUpon>FrmQuanLyLH_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmQuanLyUser_Main.resx">
-      <DependentUpon>FrmQuanLyUser_Main.cs</DependentUpon>
+    <EmbeddedResource Include="FrmQuanLySV_Main.resx">
+      <DependentUpon>FrmQuanLySV_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmQuanLyUser_Modifiles.resx">
-      <DependentUpon>FrmQuanLyUser_Modifiles.cs</DependentUpon>
+    <EmbeddedResource Include="FrmQuanLyLH_Modifiles .resx">
+      <DependentUpon>FrmQuanLyLH_Modifiles .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLySV_Modifiles.resx">
+      <DependentUpon>FrmQuanLySV_Modifiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_XuLiNgonNgu.resx">
+      <DependentUpon>Frm_XuLiNgonNgu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,6 +134,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Frm_ChangePassword.resx">
+      <DependentUpon>Frm_ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,4 +1,5 @@
 ﻿using Project1.BusinessLayer;
+using Project1.Data_Layer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,14 +22,25 @@ namespace Project1
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            bllUser = new BLLUser(FrmMain.Instance.userDataPath);
+            bllUser = new BLLUser(Main.Instance.userDataPath);
+            CheckCache();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             //this.Close();//dong 1 form
-            trangThaiDongForm = true;
-            Application.Exit();//dong ca chuong trinh
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("Tắt chương trình?", "Message", buttons);
+            if (result == DialogResult.Yes)
+            {
+                trangThaiDongForm = true;
+                Application.Exit();//dong ca chuong trinh
+            }
+            else
+            {
+                this.Close();
+            }
+            
             
         }
 
@@ -38,9 +50,13 @@ namespace Project1
             {
                 if (!string.IsNullOrEmpty(txtMatKhau.Text))
                 {
-                    if (KiemTraDangNhap(txtTaiKhoan.Text, txtMatKhau.Text))
+                    User user = KiemTraDangNhap(txtTaiKhoan.Text, txtMatKhau.Text);
+                    if (user != null)
                     {
+                        SaveUserCache();
+
                         trangThaiDongForm = true;
+                        Main.Instance.SetUserInfo(user);
                         this.Close();
                     }
                     else
@@ -66,17 +82,47 @@ namespace Project1
                 txtMatKhau.Focus();
             }
         }
+
+        private void CheckCache()
+        {
+            BLLUser bllUserCache = new BLLUser(Main.Instance.userDataCachePath);
+            User user = bllUserCache.CacheUserCheck();
+
+            if (user != null)
+            {
+                txtTaiKhoan.Text = user.TaiKhoan;
+                txtMatKhau.Text = user.MatKhau;
+            }
+        }
+
+        private void SaveUserCache()
+        {
+            if (rememberPass.Checked)
+            {
+                BLLUser bllUserCache = new BLLUser(Main.Instance.userDataCachePath);
+                User userCache = new User(txtTaiKhoan.Text, txtMatKhau.Text);
+                bllUserCache.userDao.AddUser(userCache, Main.Instance.userDataCachePath);
+            }
+            else
+            {
+                BLLUser bllUserCache = new BLLUser(Main.Instance.userDataCachePath);
+                User userCache = new User();
+                bllUserCache.userDao.AddUser(userCache, Main.Instance.userDataCachePath);
+            }
+        }
+
         /// <summary>
         /// phuong thuc kiem tra dang nham
         /// </summary>
         /// <param name="txtTaiKhoan">txtTaiKhoan</param>
         /// <param name="txtMatKhau">txtMatKhau</param>
         /// <returns></returns>
-        private bool KiemTraDangNhap(string txtTaiKhoan, string txtMatKhau)
+        private User KiemTraDangNhap(string txtTaiKhoan, string txtMatKhau)
         {
-            if (bllUser.LoginCheck(txtTaiKhoan, txtMatKhau))
-                return true;
-            return false;
+            bllUser = new BLLUser(Main.Instance.userDataPath);
+            User user = bllUser.LoginCheck(txtTaiKhoan, txtMatKhau);
+
+            return user;
         }
      private   bool trangThaiDongForm = false;
 
@@ -94,7 +140,7 @@ namespace Project1
 
         private void register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FrmQuanLyUser_Modifiles frmQuanLy = new FrmQuanLyUser_Modifiles();
+            FrmQuanLySV_Modifiles frmQuanLy = new FrmQuanLySV_Modifiles(null);
             frmQuanLy.isEditting = false;
             frmQuanLy.ShowDialog();
         }

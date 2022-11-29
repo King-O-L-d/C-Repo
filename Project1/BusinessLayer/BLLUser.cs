@@ -10,7 +10,7 @@ namespace Project1.BusinessLayer
 {
   public class BLLUser
     {  
-        UserDao userDao;
+        public UserDao userDao;
         public  BLLUser()
         { 
             userDao = new UserDao();
@@ -19,17 +19,28 @@ namespace Project1.BusinessLayer
         {
             userDao = new UserDao(path);
         }
-        public bool LoginCheck(string taiKhoan, string matKhau)
+        public User LoginCheck(string taiKhoan, string matKhau)
         {
-            if (userDao.ListUser.Count <= 0)
-                userDao = new UserDao();
+            //if (userDao.ListUser.Count == 0)
+            //    userDao = new UserDao();
 
-            foreach (User item in userDao.ListUser)
+            foreach (User user in userDao.ListUser)
             {
-                if (item.TaiKhoan.Equals(taiKhoan) && item.MatKhau.Equals(matKhau))
-                    return true;
+                if (user.TaiKhoan.Equals(taiKhoan) && user.MatKhau.Equals(matKhau))
+                    return user;
             }
-            return false;
+            return null;
+        }
+
+        public User CacheUserCheck()
+        {
+            
+            if (userDao.ListUser.Count >= 1)
+            {
+                return userDao.ListUser[0];
+            }
+
+            return null;
         }
     }
 }

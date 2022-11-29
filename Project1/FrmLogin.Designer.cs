@@ -39,13 +39,14 @@
             this.dkTitle = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.register = new System.Windows.Forms.LinkLabel();
+            this.rememberPass = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.BackColor = System.Drawing.SystemColors.Menu;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label4.Location = new System.Drawing.Point(208, 40);
@@ -61,7 +62,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(190, 107);
+            this.label5.Location = new System.Drawing.Point(199, 109);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 15);
             this.label5.TabIndex = 0;
@@ -73,7 +74,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(190, 171);
+            this.label6.Location = new System.Drawing.Point(199, 157);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 15);
             this.label6.TabIndex = 0;
@@ -84,7 +85,7 @@
             // 
             this.txtMatKhau.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtMatKhau.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txtMatKhau.Location = new System.Drawing.Point(193, 199);
+            this.txtMatKhau.Location = new System.Drawing.Point(202, 175);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(194, 18);
@@ -94,7 +95,7 @@
             // 
             this.txtTaiKhoan.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtTaiKhoan.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txtTaiKhoan.Location = new System.Drawing.Point(193, 135);
+            this.txtTaiKhoan.Location = new System.Drawing.Point(202, 127);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(194, 18);
             this.txtTaiKhoan.TabIndex = 0;
@@ -103,7 +104,7 @@
             // 
             this.btnDangNhap.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnDangNhap.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDangNhap.Location = new System.Drawing.Point(202, 240);
+            this.btnDangNhap.Location = new System.Drawing.Point(202, 250);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(76, 24);
             this.btnDangNhap.TabIndex = 2;
@@ -116,7 +117,7 @@
             this.btnThoat.BackColor = System.Drawing.Color.IndianRed;
             this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnThoat.Location = new System.Drawing.Point(298, 240);
+            this.btnThoat.Location = new System.Drawing.Point(298, 250);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(76, 24);
             this.btnThoat.TabIndex = 3;
@@ -128,7 +129,7 @@
             // 
             this.dkTitle.AutoSize = true;
             this.dkTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dkTitle.Location = new System.Drawing.Point(199, 277);
+            this.dkTitle.Location = new System.Drawing.Point(199, 287);
             this.dkTitle.Name = "dkTitle";
             this.dkTitle.Size = new System.Drawing.Size(100, 13);
             this.dkTitle.TabIndex = 4;
@@ -144,7 +145,7 @@
             this.register.AutoSize = true;
             this.register.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.register.LinkColor = System.Drawing.Color.SteelBlue;
-            this.register.Location = new System.Drawing.Point(317, 277);
+            this.register.Location = new System.Drawing.Point(317, 287);
             this.register.Name = "register";
             this.register.Size = new System.Drawing.Size(46, 13);
             this.register.TabIndex = 5;
@@ -152,12 +153,26 @@
             this.register.Text = "Đăng kí";
             this.register.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.register_LinkClicked);
             // 
+            // rememberPass
+            // 
+            this.rememberPass.AutoSize = true;
+            this.rememberPass.Checked = true;
+            this.rememberPass.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.rememberPass.Location = new System.Drawing.Point(202, 209);
+            this.rememberPass.Name = "rememberPass";
+            this.rememberPass.Size = new System.Drawing.Size(97, 17);
+            this.rememberPass.TabIndex = 6;
+            this.rememberPass.Text = "Nhớ mật khẩu?";
+            this.rememberPass.UseVisualStyleBackColor = true;
+            // 
             // FrmLogin
             // 
             this.AcceptButton = this.btnDangNhap;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.SystemColors.Menu;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.CancelButton = this.btnThoat;
-            this.ClientSize = new System.Drawing.Size(585, 387);
+            this.ClientSize = new System.Drawing.Size(586, 396);
+            this.Controls.Add(this.rememberPass);
             this.Controls.Add(this.register);
             this.Controls.Add(this.dkTitle);
             this.Controls.Add(this.btnThoat);
@@ -200,5 +215,6 @@
         private System.Windows.Forms.Label dkTitle;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.LinkLabel register;
+        private System.Windows.Forms.CheckBox rememberPass;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Project1
 {
-    partial class FrmQuanLyUser_Modifiles
+    partial class FrmQuanLyLH_Modifiles
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.txtId = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textID = new System.Windows.Forms.TextBox();
+            this.textUserName = new System.Windows.Forms.TextBox();
             this.txtTaiKhoan = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textPassword = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textName = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.Label();
             this.chkMatKhau = new System.Windows.Forms.CheckBox();
             this.applyButton = new System.Windows.Forms.Button();
@@ -45,87 +45,98 @@
             // txtId
             // 
             this.txtId.AutoSize = true;
-            this.txtId.Location = new System.Drawing.Point(156, 95);
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(126, 94);
             this.txtId.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.txtId.Name = "txtId";
             this.txtId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId.Size = new System.Drawing.Size(36, 29);
+            this.txtId.Size = new System.Drawing.Size(26, 20);
             this.txtId.TabIndex = 0;
             this.txtId.Text = "ID";
             this.txtId.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // textID
             // 
-            this.textBox1.Location = new System.Drawing.Point(243, 89);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(547, 35);
-            this.textBox1.TabIndex = 1;
+            this.textID.Enabled = false;
+            this.textID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textID.Location = new System.Drawing.Point(161, 88);
+            this.textID.Margin = new System.Windows.Forms.Padding(7);
+            this.textID.Name = "textID";
+            this.textID.ReadOnly = true;
+            this.textID.Size = new System.Drawing.Size(275, 26);
+            this.textID.TabIndex = 1;
             // 
-            // textBox2
+            // textUserName
             // 
-            this.textBox2.Location = new System.Drawing.Point(243, 157);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(7);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(547, 35);
-            this.textBox2.TabIndex = 3;
+            this.textUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textUserName.Location = new System.Drawing.Point(161, 132);
+            this.textUserName.Margin = new System.Windows.Forms.Padding(7);
+            this.textUserName.Name = "textUserName";
+            this.textUserName.Size = new System.Drawing.Size(342, 26);
+            this.textUserName.TabIndex = 3;
             // 
             // txtTaiKhoan
             // 
             this.txtTaiKhoan.AutoSize = true;
-            this.txtTaiKhoan.Location = new System.Drawing.Point(69, 163);
+            this.txtTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTaiKhoan.Location = new System.Drawing.Point(74, 135);
             this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtTaiKhoan.Size = new System.Drawing.Size(123, 29);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(84, 20);
             this.txtTaiKhoan.TabIndex = 2;
             this.txtTaiKhoan.Text = "Tài Khoản";
             // 
-            // textBox3
+            // textPassword
             // 
-            this.textBox3.Location = new System.Drawing.Point(243, 231);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(7);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(547, 35);
-            this.textBox3.TabIndex = 5;
+            this.textPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPassword.Location = new System.Drawing.Point(161, 168);
+            this.textPassword.Margin = new System.Windows.Forms.Padding(7);
+            this.textPassword.Name = "textPassword";
+            this.textPassword.Size = new System.Drawing.Size(342, 26);
+            this.textPassword.TabIndex = 5;
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.AutoSize = true;
-            this.txtMatKhau.Location = new System.Drawing.Point(79, 237);
+            this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Location = new System.Drawing.Point(79, 174);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtMatKhau.Size = new System.Drawing.Size(113, 29);
+            this.txtMatKhau.Size = new System.Drawing.Size(80, 20);
             this.txtMatKhau.TabIndex = 4;
             this.txtMatKhau.Text = "Mật Khẩu";
             // 
-            // textBox4
+            // textName
             // 
-            this.textBox4.Location = new System.Drawing.Point(243, 306);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(7);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(547, 35);
-            this.textBox4.TabIndex = 7;
+            this.textName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textName.Location = new System.Drawing.Point(161, 216);
+            this.textName.Margin = new System.Windows.Forms.Padding(7);
+            this.textName.Name = "textName";
+            this.textName.Size = new System.Drawing.Size(342, 26);
+            this.textName.TabIndex = 7;
             // 
             // txtHoTen
             // 
             this.txtHoTen.AutoSize = true;
-            this.txtHoTen.Location = new System.Drawing.Point(65, 312);
+            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.Location = new System.Drawing.Point(71, 216);
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtHoTen.Size = new System.Drawing.Size(127, 29);
+            this.txtHoTen.Size = new System.Drawing.Size(89, 20);
             this.txtHoTen.TabIndex = 6;
             this.txtHoTen.Text = "Họ Và Tên";
             // 
             // chkMatKhau
             // 
             this.chkMatKhau.AutoSize = true;
-            this.chkMatKhau.Location = new System.Drawing.Point(243, 376);
+            this.chkMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMatKhau.Location = new System.Drawing.Point(161, 253);
             this.chkMatKhau.Margin = new System.Windows.Forms.Padding(7);
             this.chkMatKhau.Name = "chkMatKhau";
-            this.chkMatKhau.Size = new System.Drawing.Size(183, 33);
+            this.chkMatKhau.Size = new System.Drawing.Size(137, 24);
             this.chkMatKhau.TabIndex = 8;
             this.chkMatKhau.Text = "Nhớ Mật Khẩu";
             this.chkMatKhau.UseVisualStyleBackColor = true;
@@ -133,22 +144,24 @@
             // applyButton
             // 
             this.applyButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.applyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applyButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.applyButton.Location = new System.Drawing.Point(243, 429);
+            this.applyButton.Location = new System.Drawing.Point(179, 293);
             this.applyButton.Name = "applyButton";
-            this.applyButton.Size = new System.Drawing.Size(266, 61);
+            this.applyButton.Size = new System.Drawing.Size(99, 35);
             this.applyButton.TabIndex = 9;
             this.applyButton.Text = "Xác Nhận";
             this.applyButton.UseVisualStyleBackColor = false;
-            this.applyButton.Click += new System.EventHandler(this.ApplyButton_Click);
+            this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.IndianRed;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button2.Location = new System.Drawing.Point(524, 429);
+            this.button2.Location = new System.Drawing.Point(308, 293);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(266, 61);
+            this.button2.Size = new System.Drawing.Size(95, 35);
             this.button2.TabIndex = 9;
             this.button2.Text = "Thoát";
             this.button2.UseVisualStyleBackColor = false;
@@ -159,34 +172,35 @@
             this.titleText.AutoSize = true;
             this.titleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleText.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.titleText.Location = new System.Drawing.Point(424, 31);
+            this.titleText.Location = new System.Drawing.Point(213, 23);
             this.titleText.Name = "titleText";
-            this.titleText.Size = new System.Drawing.Size(185, 29);
+            this.titleText.Size = new System.Drawing.Size(225, 36);
             this.titleText.TabIndex = 10;
             this.titleText.Text = "Sửa Thông Tin";
             // 
-            // FrmQuanLyUser_Modifiles
+            // FrmQuanLyLH_Modifiles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 570);
+            this.ClientSize = new System.Drawing.Size(584, 385);
             this.Controls.Add(this.titleText);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.applyButton);
             this.Controls.Add(this.chkMatKhau);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textName);
             this.Controls.Add(this.txtHoTen);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textPassword);
             this.Controls.Add(this.txtMatKhau);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textUserName);
             this.Controls.Add(this.txtTaiKhoan);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textID);
             this.Controls.Add(this.txtId);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(7);
-            this.Name = "FrmQuanLyUser_Modifiles";
-            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Text = "FrmQuanLyUser_Modifies";
+            this.Name = "FrmQuanLyLH_Modifiles";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Chinh sua thong tin lop hoc";
             this.Load += new System.EventHandler(this.FrmQuanLyUser_Modifiles_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -198,12 +212,12 @@
         
 
         private System.Windows.Forms.Label txtId;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textID;
+        private System.Windows.Forms.TextBox textUserName;
         private System.Windows.Forms.Label txtTaiKhoan;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textPassword;
         private System.Windows.Forms.Label txtMatKhau;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.Label txtHoTen;
         private System.Windows.Forms.CheckBox chkMatKhau;
         private System.Windows.Forms.Button applyButton;
