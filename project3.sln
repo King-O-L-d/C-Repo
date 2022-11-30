@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pro03", "..\..\..\Downloads\Compressed\CSharpProgramming2022-Develop_5\CSharpProgramming2022-Develop\Projects\Project03\Pro03_20CT112_113\Pro03.csproj", "{A5B470E7-47D7-434A-96AF-E3009536EEA0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5B470E7-47D7-434A-96AF-E3009536EEA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5B470E7-47D7-434A-96AF-E3009536EEA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5B470E7-47D7-434A-96AF-E3009536EEA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5B470E7-47D7-434A-96AF-E3009536EEA0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A548CB04-96D9-4C8D-BD0F-6C3B6CA034AE}
+	EndGlobalSection
+EndGlobal
