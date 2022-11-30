@@ -14,8 +14,8 @@ namespace Project1
 {
     public partial class FrmQuanLyLH_Main : Form
     {
-        public User selectedUser;
-        private BLLUser bLLUser;
+        public Class selectedUser;
+        private BLLClass bLLUser;
         public FrmQuanLyLH_Main()
         {
             InitializeComponent();
@@ -23,13 +23,13 @@ namespace Project1
 
         public void FrmQuanLyUser_Main_Load(object sender, EventArgs e)
         {
-            this.bLLUser = bLLUser;
+            this.bLLUser = new BLLClass(Main.Instance.classDataPath);
             ShowListUser(bLLUser);
         }
 
-        public void ShowListUser(BLLUser bLLUser)
+        public void ShowListUser(BLLClass bLLUser)
         {
-            var bindingList = new BindingList<User>(bLLUser.userDao.ListUser);
+            var bindingList = new BindingList<Class>(bLLUser.classDao.ListClass);
             var source = new BindingSource(bindingList, null);
             this.dgvUser.DataSource = source;
         }
@@ -48,10 +48,13 @@ namespace Project1
 
         private void dgvUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dgvUser.CurrentRow == null)
+            {
+                return;
+            }
+
             long userID = Convert.ToInt64(dgvUser[0, dgvUser.CurrentRow.Index].Value);
-
-            selectedUser = bLLUser.userDao.GetUserByID(userID);
-
+            selectedUser = bLLUser.classDao.GetClassByID(userID);
         }
 
         private void toolStripNapLai_Click(object sender, EventArgs e)
@@ -90,7 +93,7 @@ namespace Project1
                 return;
             }
             dgvUser.DataSource = null;
-            bLLUser.userDao.DeleteUser(selectedUser);
+            bLLUser.classDao.DeleteClass(selectedUser);
             ShowListUser(bLLUser);
             //Refresh();
         }

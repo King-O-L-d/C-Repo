@@ -16,7 +16,7 @@ namespace Project1
     {
         FrmQuanLyLH_Main data;
         public bool isEditting = false;
-        BLLUser bLLUser = new BLLUser(Main.Instance.userDataPath);
+        BLLClass bLLUser = new BLLClass(Main.Instance.classDataPath);
         public FrmQuanLyLH_Modifiles(FrmQuanLyLH_Main data = null)
         {
             this.data = data;
@@ -42,43 +42,37 @@ namespace Project1
 
         private void Editting()
         {
-            this.titleText.Text = "Sửa người dùng";
+            this.titleText.Text = "Sửa lớp";
         }
 
-        public void SetData(User user)
+        public void SetData(Class user)
         {
             if (user == null)
                 return;
 
-            this.textID.Text = user.ID.ToString();
-            this.textName.Text = user.HoVaTen;
-            this.textUserName.Text = user.TaiKhoan;
-            this.textPassword.Text = user.MatKhau;
-            this.chkMatKhau.Checked = user.NhoMatKhau;
+            this.textID.Text = user.GetId().ToString();
+            this.textUserName.Text = user.GetTenLop();
+            this.textUserName.Text = user.GetSiSo().ToString();
         }
 
         private void Adding()
         {
-            this.titleText.Text = "Thêm người dùng";
+            this.titleText.Text = "Thêm lớp";
         }
 
         private void applyButton_Click(object sender, EventArgs e)
         {
-            User user = new User();
-            user.ID = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-            user.TaiKhoan = this.textUserName.Text;
-            user.MatKhau = this.textPassword.Text;
-            user.HoVaTen = this.textName.Text;
-            user.NhoMatKhau = this.chkMatKhau.Checked;
+            Class user = new Class();
+            user.SetTenLop(this.textUserName.Text) ;
 
             if (isEditting)
             {
-                int userIndex = bLLUser.userDao.GetUserIndexByID(user.ID);
-                bLLUser.userDao.EditUser(user, userIndex);
+                //int userIndex = bLLUser.userDao.GetUserIndexByID(user.ID);
+               // bLLUser.userDao.EditUser(user, userIndex);
             }
             else
             {
-                bLLUser.userDao.AddUser(user);
+                bLLUser.classDao.AddClass(user);
             }
 
             if (this.data != null)

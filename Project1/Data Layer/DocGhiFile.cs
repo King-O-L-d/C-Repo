@@ -77,6 +77,68 @@ namespace Project1.Data_Layer
             }
 
         }
+
+        public List<Class> DocClass()
+        {
+            List<Class> lopHoc = null;//Khai bao danh sach User
+            using (FileStream fileStream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read))
+            {
+                using (StreamReader streamReader = new StreamReader(fileStream))
+                {
+                    string line = string.Empty;
+                    Class lop;
+                    lopHoc = new List<Class>();//khoi tao danh sach
+                    while ((line = streamReader.ReadLine()) != null)
+                    {
+                        if (!string.IsNullOrEmpty(line))
+                        {
+                            lop = new Class();//khoi tao mot user
+                                              // users.Add(user.DocUser(line));
+                            string[] mang = line.Split(',');
+                            lop.SetTenLop(mang[1]);
+                            lop.SetSiSo(Int32.Parse(mang[2]));
+                            lopHoc.Add(lop);//Them user vao danh sach
+                        }
+                    }
+                    streamReader.Close();
+                }
+
+                fileStream.Close();
+            }
+            return lopHoc;
+        }
+
+        public bool GhiClass(string path, List<Class> lopHoc)
+        {
+            try
+            {
+                using (FileStream fileStream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write))
+                {
+                    fileStream.SetLength(0);
+                    using (StreamWriter streamWrite = new StreamWriter(fileStream))
+                    {
+                        foreach (Class item in lopHoc)
+                        {
+                            // item.GhiUser(streamWrite);
+                            streamWrite.WriteLine(string.Format("{0},{1},{2}", item.GetId(), item.GetTenLop(), item.GetSiSo()));
+                        }
+
+                        streamWrite.Close();
+                    }
+                    fileStream.Close();
+                }
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return false;
+            }
+
+        }
+
     }
+
+
 }
 

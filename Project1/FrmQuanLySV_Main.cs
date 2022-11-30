@@ -23,7 +23,7 @@ namespace Project1
 
         public void FrmQuanLyUser_Main_Load(object sender, EventArgs e)
         {
-            this.bLLUser = bLLUser;
+            this.bLLUser = new BLLUser(Main.Instance.userDataPath);
             ShowListUser(bLLUser);
         }
 

@@ -34,9 +34,6 @@
             this.txtTaiKhoan = new System.Windows.Forms.Label();
             this.textPassword = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.Label();
-            this.textName = new System.Windows.Forms.TextBox();
-            this.txtHoTen = new System.Windows.Forms.Label();
-            this.chkMatKhau = new System.Windows.Forms.CheckBox();
             this.applyButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.titleText = new System.Windows.Forms.Label();
@@ -50,7 +47,7 @@
             this.txtId.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.txtId.Name = "txtId";
             this.txtId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId.Size = new System.Drawing.Size(26, 20);
+            this.txtId.Size = new System.Drawing.Size(21, 17);
             this.txtId.TabIndex = 0;
             this.txtId.Text = "ID";
             this.txtId.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -63,7 +60,7 @@
             this.textID.Margin = new System.Windows.Forms.Padding(7);
             this.textID.Name = "textID";
             this.textID.ReadOnly = true;
-            this.textID.Size = new System.Drawing.Size(275, 26);
+            this.textID.Size = new System.Drawing.Size(275, 23);
             this.textID.TabIndex = 1;
             // 
             // textUserName
@@ -72,20 +69,20 @@
             this.textUserName.Location = new System.Drawing.Point(161, 132);
             this.textUserName.Margin = new System.Windows.Forms.Padding(7);
             this.textUserName.Name = "textUserName";
-            this.textUserName.Size = new System.Drawing.Size(342, 26);
+            this.textUserName.Size = new System.Drawing.Size(342, 23);
             this.textUserName.TabIndex = 3;
             // 
             // txtTaiKhoan
             // 
             this.txtTaiKhoan.AutoSize = true;
             this.txtTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTaiKhoan.Location = new System.Drawing.Point(74, 135);
+            this.txtTaiKhoan.Location = new System.Drawing.Point(79, 135);
             this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtTaiKhoan.Size = new System.Drawing.Size(84, 20);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(56, 17);
             this.txtTaiKhoan.TabIndex = 2;
-            this.txtTaiKhoan.Text = "Tài Khoản";
+            this.txtTaiKhoan.Text = "Tên lớp";
             // 
             // textPassword
             // 
@@ -93,7 +90,7 @@
             this.textPassword.Location = new System.Drawing.Point(161, 168);
             this.textPassword.Margin = new System.Windows.Forms.Padding(7);
             this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(342, 26);
+            this.textPassword.Size = new System.Drawing.Size(342, 23);
             this.textPassword.TabIndex = 5;
             // 
             // txtMatKhau
@@ -104,42 +101,9 @@
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtMatKhau.Size = new System.Drawing.Size(80, 20);
+            this.txtMatKhau.Size = new System.Drawing.Size(39, 17);
             this.txtMatKhau.TabIndex = 4;
-            this.txtMatKhau.Text = "Mật Khẩu";
-            // 
-            // textName
-            // 
-            this.textName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textName.Location = new System.Drawing.Point(161, 216);
-            this.textName.Margin = new System.Windows.Forms.Padding(7);
-            this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size(342, 26);
-            this.textName.TabIndex = 7;
-            // 
-            // txtHoTen
-            // 
-            this.txtHoTen.AutoSize = true;
-            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoTen.Location = new System.Drawing.Point(71, 216);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtHoTen.Size = new System.Drawing.Size(89, 20);
-            this.txtHoTen.TabIndex = 6;
-            this.txtHoTen.Text = "Họ Và Tên";
-            // 
-            // chkMatKhau
-            // 
-            this.chkMatKhau.AutoSize = true;
-            this.chkMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkMatKhau.Location = new System.Drawing.Point(161, 253);
-            this.chkMatKhau.Margin = new System.Windows.Forms.Padding(7);
-            this.chkMatKhau.Name = "chkMatKhau";
-            this.chkMatKhau.Size = new System.Drawing.Size(137, 24);
-            this.chkMatKhau.TabIndex = 8;
-            this.chkMatKhau.Text = "Nhớ Mật Khẩu";
-            this.chkMatKhau.UseVisualStyleBackColor = true;
+            this.txtMatKhau.Text = "Sỉ số";
             // 
             // applyButton
             // 
@@ -174,21 +138,18 @@
             this.titleText.ForeColor = System.Drawing.SystemColors.Highlight;
             this.titleText.Location = new System.Drawing.Point(213, 23);
             this.titleText.Name = "titleText";
-            this.titleText.Size = new System.Drawing.Size(225, 36);
+            this.titleText.Size = new System.Drawing.Size(185, 29);
             this.titleText.TabIndex = 10;
             this.titleText.Text = "Sửa Thông Tin";
             // 
             // FrmQuanLyLH_Modifiles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 385);
             this.Controls.Add(this.titleText);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.applyButton);
-            this.Controls.Add(this.chkMatKhau);
-            this.Controls.Add(this.textName);
-            this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.textPassword);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.textUserName);
@@ -217,9 +178,6 @@
         private System.Windows.Forms.Label txtTaiKhoan;
         private System.Windows.Forms.TextBox textPassword;
         private System.Windows.Forms.Label txtMatKhau;
-        private System.Windows.Forms.TextBox textName;
-        private System.Windows.Forms.Label txtHoTen;
-        private System.Windows.Forms.CheckBox chkMatKhau;
         private System.Windows.Forms.Button applyButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label titleText;

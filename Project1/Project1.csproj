@@ -48,8 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\BLLClass.cs" />
     <Compile Include="BusinessLayer\BLLUser.cs" />
     <Compile Include="ClsMain.cs" />
+    <Compile Include="Data Layer\Class.cs" />
+    <Compile Include="Data Layer\ClassDao.cs" />
     <Compile Include="Data Layer\DocGhiFile.cs" />
     <Compile Include="Data Layer\User.cs" />
     <Compile Include="Data Layer\UserDao.cs" />
