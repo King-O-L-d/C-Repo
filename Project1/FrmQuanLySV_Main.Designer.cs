@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmQuanLySV_Main));
-            System.Windows.Forms.DataGridView dgvUser;
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripNapLai = new System.Windows.Forms.ToolStripButton();
             this.actionAdd = new System.Windows.Forms.ToolStripButton();
@@ -210,5 +209,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colMatKhau;
         private System.Windows.Forms.DataGridViewTextBoxColumn colHoVaTen;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colNhoMatKhau;
+        public System.Windows.Forms.DataGridView dgvUser;
+
     }
-    }
+}

@@ -83,7 +83,6 @@ namespace Project1.Data_Layer
         public void DeleteUser(User user)
         {
             listUser.Remove(user);
-            MessageBox.Show(ListUser.Count.ToString());
             docGhi = new DocGhiFile(userDataPath);
             docGhi.GhiFile(userDataPath, listUser);
         }

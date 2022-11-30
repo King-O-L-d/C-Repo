@@ -16,6 +16,7 @@ namespace Project1
         public static Main Instance;
         private User currentUser;
         public string userDataPath { get; private set; }
+        public string classDataPath { get; private set; }
         public string userDataCachePath { get; private set; }
         bool isSystemMenuCollapse = false;
         public Main()
@@ -27,6 +28,7 @@ namespace Project1
         {
             Instance = this;
             userDataPath = string.Format(@"{0}/user.init", Application.StartupPath);
+            classDataPath = string.Format(@"{0}/class.init", Application.StartupPath);
             userDataCachePath = string.Format(@"{0}/userCache.init", Application.StartupPath);
             LoadFormLogin();
         }
