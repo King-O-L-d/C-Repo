@@ -37,7 +37,9 @@ namespace Project1.Data_Layer
                             user.TaiKhoan = mang[1];
                             user.MatKhau = mang[2];
                             user.HoVaTen = mang[3];
-                            user.NhoMatKhau = Convert.ToBoolean(mang[4]);
+                            user.Lop = mang[4];
+                            user.GioiTinh = mang[5];
+                            user.NhoMatKhau = Convert.ToBoolean(mang[6]);
                             users.Add(user);//Them user vao danh sach
                         }
                     }
@@ -61,7 +63,7 @@ namespace Project1.Data_Layer
                         foreach (User item in users)
                         {
                             // item.GhiUser(streamWrite);
-                            streamWrite.WriteLine(string.Format("{0},{1},{2},{3},{4}", item.ID, item.TaiKhoan, item.MatKhau, item.HoVaTen, item.NhoMatKhau));
+                            streamWrite.WriteLine(string.Format("{0},{1},{2},{3},{4},{5},{6}", item.ID, item.TaiKhoan, item.MatKhau, item.HoVaTen, item.Lop, item.GioiTinh, item.NhoMatKhau));
                         }
 
                         streamWrite.Close();

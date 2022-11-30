@@ -19,7 +19,7 @@ namespace Project1.Data_Layer
         {
             listUser = new List<User>()
             {
-                new User(){ID=0,TaiKhoan="admin",MatKhau="admin",HoVaTen="Kiet",NhoMatKhau=false}
+                new User(){ID=0,TaiKhoan="admin",MatKhau="admin",HoVaTen="Kiet", Lop = "20CT112", GioiTinh = "Nam",NhoMatKhau=false}
 
             };
         }

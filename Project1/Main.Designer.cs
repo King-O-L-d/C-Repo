@@ -42,7 +42,6 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tabFormControl1 = new DevComponents.DotNetBar.Controls.TabFormControl();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.exitBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -220,11 +219,6 @@
             // 
             // 
             // 
-            this.tabFormControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tabFormControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabFormControl1.Name = "tabFormControl1";
-            this.tabFormControl1.TabIndex = 0;
-            this.tabFormControl1.TabStripFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // tabControl
             // 
@@ -292,7 +286,6 @@
         private System.Windows.Forms.Button manageStuButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Timer timer1;
-        private DevComponents.DotNetBar.Controls.TabFormControl tabFormControl1;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

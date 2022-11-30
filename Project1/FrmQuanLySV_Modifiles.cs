@@ -51,9 +51,11 @@ namespace Project1
                 return;
 
             this.textID.Text = user.ID.ToString();
+            this.textTaiKhoan.Text = user.TaiKhoan;
             this.textName.Text = user.HoVaTen;
-            this.textClassName.Text = user.TaiKhoan;
             this.textPassword.Text = user.MatKhau;
+            this.textClass.Text = user.Lop;
+            this.textSex.Text = user.GioiTinh;
             this.chkMatKhau.Checked = user.NhoMatKhau;
         }
 
@@ -66,9 +68,11 @@ namespace Project1
         {
             User user = new User();
             user.ID = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-            user.TaiKhoan = this.textClassName.Text;
-            user.MatKhau = this.textPassword.Text;
+            user.TaiKhoan = this.textTaiKhoan.Text;
             user.HoVaTen = this.textName.Text;
+            user.MatKhau = this.textClass.Text;
+            user.Lop = this.textClass.Text;
+            user.GioiTinh = this.textSex.Text;
             user.NhoMatKhau = this.chkMatKhau.Checked;
 
             if (isEditting)

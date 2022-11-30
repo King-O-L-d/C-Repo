@@ -14,14 +14,18 @@ namespace Project1.Data_Layer
         private string taiKhoan;
         private string matKhau;
         private string hoVaTen;
+        private string lop;
+        private string gioiTinh;
         private bool nhoMatKhau;
 
-        public User(string taiKhoan, string matKhau, string hoVaTen, bool nhoMatKhau)
+        public User(string taiKhoan, string matKhau, string hoVaTen, string lop, string gioiTinh, bool nhoMatKhau)
         {
             this.iD = 0;
             this.taiKhoan = taiKhoan;
             this.matKhau = matKhau;
             this.hoVaTen = hoVaTen;
+            this.lop = lop; 
+            this.gioiTinh = gioiTinh;       
             this.nhoMatKhau = nhoMatKhau;
         }
         public User()
@@ -30,6 +34,8 @@ namespace Project1.Data_Layer
             this.taiKhoan = "";
             this.matKhau = "";
             this.hoVaTen = "";
+            this.lop = "";
+            this.gioiTinh = "";
             this.nhoMatKhau = false;
         }
 
@@ -39,6 +45,8 @@ namespace Project1.Data_Layer
             this.taiKhoan = taiKhoan;
             this.matKhau = matKhau;
             this.hoVaTen = "";
+            this.lop = "";
+            this.gioiTinh = "";
             this.nhoMatKhau = false;
         }
 
@@ -69,6 +77,16 @@ namespace Project1.Data_Layer
             get { return hoVaTen; } 
             set { hoVaTen = value; } 
         }
+        public string Lop
+        {
+            get { return lop; }
+            set { lop = value; }
+        }
+        public string GioiTinh
+        {
+            get { return gioiTinh; }
+            set { gioiTinh = value; }
+        }
         public bool NhoMatKhau
         { 
             get { return nhoMatKhau; }
@@ -83,13 +101,15 @@ namespace Project1.Data_Layer
             user.TaiKhoan = mang[1];
             user.MatKhau = mang[2];
             user.HoVaTen = mang[3];
-            user.NhoMatKhau = Convert.ToBoolean(mang[4]);
+            user.Lop = mang[4]; 
+            user.GioiTinh = mang[5];    
+            user.NhoMatKhau = Convert.ToBoolean(mang[6]);
 
             return user;
         }
         public void GhiUser(StreamWriter streamWriter)
         {
-            streamWriter.WriteLine(string.Format("{0},{1},{2},{3},{4}", ID, TaiKhoan, MatKhau, HoVaTen, NhoMatKhau));
+            streamWriter.WriteLine(string.Format("{0},{1},{2},{3},{4},{5},{6}", ID, TaiKhoan, MatKhau, HoVaTen, Lop, GioiTinh, NhoMatKhau));
         }
     }
 }
