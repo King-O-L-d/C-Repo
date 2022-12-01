@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DevComponents.DotNetBar;
 namespace Project1
 {
     public partial class Main : Form

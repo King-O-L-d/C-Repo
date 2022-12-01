@@ -52,7 +52,7 @@
             this.label4.Location = new System.Drawing.Point(208, 40);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(10);
-            this.label4.Size = new System.Drawing.Size(175, 51);
+            this.label4.Size = new System.Drawing.Size(213, 59);
             this.label4.TabIndex = 0;
             this.label4.Text = "Đăng nhập";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -64,7 +64,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(199, 109);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 15);
+            this.label5.Size = new System.Drawing.Size(50, 18);
             this.label5.TabIndex = 0;
             this.label5.Text = "MSSV";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,7 +76,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(199, 157);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 15);
+            this.label6.Size = new System.Drawing.Size(69, 18);
             this.label6.TabIndex = 0;
             this.label6.Text = "Mật khẩu";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -88,7 +88,7 @@
             this.txtMatKhau.Location = new System.Drawing.Point(202, 175);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(194, 18);
+            this.txtMatKhau.Size = new System.Drawing.Size(194, 21);
             this.txtMatKhau.TabIndex = 1;
             // 
             // txtTaiKhoan
@@ -97,8 +97,9 @@
             this.txtTaiKhoan.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtTaiKhoan.Location = new System.Drawing.Point(202, 127);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(194, 18);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(194, 21);
             this.txtTaiKhoan.TabIndex = 0;
+            this.txtTaiKhoan.TextChanged += new System.EventHandler(this.txtTaiKhoan_TextChanged);
             // 
             // btnDangNhap
             // 
@@ -131,7 +132,7 @@
             this.dkTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dkTitle.Location = new System.Drawing.Point(199, 287);
             this.dkTitle.Name = "dkTitle";
-            this.dkTitle.Size = new System.Drawing.Size(100, 13);
+            this.dkTitle.Size = new System.Drawing.Size(130, 17);
             this.dkTitle.TabIndex = 4;
             this.dkTitle.Text = "Chưa có tài khoản?";
             this.dkTitle.Click += new System.EventHandler(this.dkTitle_Click);
@@ -147,7 +148,7 @@
             this.register.LinkColor = System.Drawing.Color.SteelBlue;
             this.register.Location = new System.Drawing.Point(317, 287);
             this.register.Name = "register";
-            this.register.Size = new System.Drawing.Size(46, 13);
+            this.register.Size = new System.Drawing.Size(56, 17);
             this.register.TabIndex = 5;
             this.register.TabStop = true;
             this.register.Text = "Đăng kí";
@@ -160,7 +161,7 @@
             this.rememberPass.CheckState = System.Windows.Forms.CheckState.Checked;
             this.rememberPass.Location = new System.Drawing.Point(202, 209);
             this.rememberPass.Name = "rememberPass";
-            this.rememberPass.Size = new System.Drawing.Size(97, 17);
+            this.rememberPass.Size = new System.Drawing.Size(113, 19);
             this.rememberPass.TabIndex = 6;
             this.rememberPass.Text = "Nhớ mật khẩu?";
             this.rememberPass.UseVisualStyleBackColor = true;

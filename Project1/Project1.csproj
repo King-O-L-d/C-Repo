@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2">
-      <HintPath>C:\Users\Ton\Downloads\DevComponents.DotNetBar2 (1)\DevComponents.DotNetBar2.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -76,7 +76,7 @@
             this.textClassName.Name = "textClassName";
             this.textClassName.Size = new System.Drawing.Size(342, 23);
             this.textClassName.TabIndex = 3;
-            this.textClassName.TextChanged += new System.EventHandler(this.textClassName_TextChanged);
+         //   this.textClassName.TextChanged += new System.EventHandler(this.textClassName_TextChanged);
             // 
             // Lop
             // 

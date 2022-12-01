@@ -86,10 +86,45 @@ namespace Project1
                     MessageBox.Show("Lop khong ton tai");
                     return;
                 }
+                if (!string.IsNullOrEmpty(textClassName.Text))
+                {
+                    if (!string.IsNullOrEmpty(textPassword.Text))
+                    {
+
+                        if (user != null)
+                        {
+
+
+                            Main.Instance.SetUserInfo(user);
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("tai khoan hoac mat khau ko dung", "Thong Bao", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tai khoan rong", "Waring", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Mat Khau rong", "Waring", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                    txtMatKhau.Focus();
+                }
+
+
 
                 classDao.ListClass[index].SetSiSo(classDao.ListClass[index].GetSiSo() + 1);
                 classDao.SaveListClass(classDao.ListClass);
                 bLLUser.userDao.AddUser(user);
+
 
             }
 
@@ -100,10 +135,5 @@ namespace Project1
 
             this.Close();
         }
-
-        private void textClassName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-    }
+    } 
 }

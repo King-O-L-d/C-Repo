@@ -25,7 +25,7 @@ namespace Project1
 
         private void Frm_ChangePassword_Load(object sender, EventArgs e)
         {
-            usernameText.Text = user.TaiKhoan;
+            usernameText.Text = user.HoVaTen;
             
         }
 
@@ -65,5 +65,7 @@ namespace Project1
         {
             Main.Instance.CloseTab();
         }
+
+        
     }
 }
