@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project1.BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,6 +42,29 @@ namespace Project1.Data_Layer
             return null;
         }
 
+        public Class GetClassByName(string name)
+        {
+            foreach (Class lop in listClass)
+            {
+                if (lop.GetTenLop() == name)
+                    return lop;
+            }
+
+            return null;
+        }
+
+        public int GetClassIndexByName(string name)
+        {
+            for (int i = 0; i < listClass.Count; i++)
+            {
+                if (listClass[i].GetTenLop() == name)
+                    return i;
+            }
+
+            return -1;
+        }
+
+
         public int GetClassIndexByID(long id)
         {
             for (int i = 0; i < listClass.Count; i++)
@@ -79,6 +103,16 @@ namespace Project1.Data_Layer
         //xoa
         public void DeleteClass(Class lop)
         {
+            BLLUser bLLUser = new BLLUser(Main.Instance.userDataPath);
+            foreach(User user in bLLUser.userDao.ListUser)
+            {
+                if (user.TaiKhoan == lop.GetTenLop())
+                {
+                    MessageBox.Show("Khong the xoa lop");
+                    return;
+                }
+            }
+
             listClass.Remove(lop);
             docGhi = new DocGhiFile(classDataPath);
             docGhi.GhiClass(classDataPath, listClass);

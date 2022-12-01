@@ -64,9 +64,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(199, 109);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 15);
+            this.label5.Size = new System.Drawing.Size(41, 15);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Tài khoản";
+            this.label5.Text = "MSSV";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6

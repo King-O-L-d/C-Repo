@@ -39,31 +39,9 @@
             this.colTenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSiSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgvUser = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(dgvUser)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(dgvUser)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvUser
-            // 
-            dgvUser.AllowUserToAddRows = false;
-            dgvUser.AllowUserToDeleteRows = false;
-            dgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dgvUser.BackgroundColor = System.Drawing.Color.Azure;
-            dgvUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colId,
-            this.colTenLop,
-            this.colSiSo});
-            dgvUser.Dock = System.Windows.Forms.DockStyle.Bottom;
-            dgvUser.Location = new System.Drawing.Point(0, 28);
-            dgvUser.Name = "dgvUser";
-            dgvUser.ReadOnly = true;
-            dgvUser.RowHeadersWidth = 51;
-            dgvUser.Size = new System.Drawing.Size(800, 422);
-            dgvUser.TabIndex = 2;
-            dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellContentClick);
-            dgvUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellContentClick);
             // 
             // toolStrip1
             // 
@@ -123,6 +101,28 @@
             this.actionQuit.Text = "Thoát";
             this.actionQuit.Click += new System.EventHandler(this.ActionQuit_Click);
             // 
+            // dgvUser
+            // 
+            dgvUser.AllowUserToAddRows = false;
+            dgvUser.AllowUserToDeleteRows = false;
+            dgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dgvUser.BackgroundColor = System.Drawing.Color.Azure;
+            dgvUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colId,
+            this.colTenLop,
+            this.colSiSo});
+            dgvUser.Dock = System.Windows.Forms.DockStyle.Bottom;
+            dgvUser.Location = new System.Drawing.Point(0, 28);
+            dgvUser.Name = "dgvUser";
+            dgvUser.ReadOnly = true;
+            dgvUser.RowHeadersWidth = 51;
+            dgvUser.Size = new System.Drawing.Size(800, 422);
+            dgvUser.TabIndex = 2;
+            dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellContentClick);
+            dgvUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellContentClick);
+            // 
             // colId
             // 
             this.colId.DataPropertyName = "ID";
@@ -135,7 +135,7 @@
             // colTenLop
             // 
             this.colTenLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.colTenLop.DataPropertyName = "Tên lớp";
+            this.colTenLop.DataPropertyName = "ClassName";
             this.colTenLop.HeaderText = "Tên lớp";
             this.colTenLop.MinimumWidth = 450;
             this.colTenLop.Name = "colTenLop";
@@ -144,7 +144,7 @@
             // 
             // colSiSo
             // 
-            this.colSiSo.DataPropertyName = "MatKhau";
+            this.colSiSo.DataPropertyName = "SiSo";
             this.colSiSo.FillWeight = 54.30022F;
             this.colSiSo.HeaderText = "Sỉ số";
             this.colSiSo.MinimumWidth = 6;
@@ -162,9 +162,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Quan Ly Lop Hoc";
             this.Load += new System.EventHandler(this.FrmQuanLyUser_Main_Load);
-            ((System.ComponentModel.ISupportInitialize)(dgvUser)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(dgvUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

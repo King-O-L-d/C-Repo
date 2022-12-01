@@ -11,7 +11,7 @@ namespace Project1.Data_Layer
     {
         private List<User> listUser;
         public List<User> ListUser { get { return listUser; } set { listUser = value; } }
-
+        public User adminUser = new User(true);
         public string userDataPath;
 
         DocGhiFile docGhi;
@@ -85,6 +85,11 @@ namespace Project1.Data_Layer
             listUser.Remove(user);
             docGhi = new DocGhiFile(userDataPath);
             docGhi.GhiFile(userDataPath, listUser);
+
+            ClassDao classDao = new ClassDao(Main.Instance.classDataPath);
+            int index = classDao.GetClassIndexByName(user.TaiKhoan);
+            classDao.ListClass[index].SetSiSo(classDao.ListClass[index].GetSiSo() - 1);
+            classDao.SaveListClass(classDao.ListClass);
         }
 
         public void SaveListUser(List<User> users)

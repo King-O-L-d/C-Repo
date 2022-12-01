@@ -14,7 +14,7 @@ namespace Project1
     public partial class Main : Form
     {
         public static Main Instance;
-        private User currentUser;
+        public User currentUser;
         public string userDataPath { get; private set; }
         public string classDataPath { get; private set; }
         public string userDataCachePath { get; private set; }
@@ -57,6 +57,10 @@ namespace Project1
             currentUser = user;
         }
 
+        public bool IsAdmin()
+        {
+            return currentUser.TaiKhoan == "admin";
+        }
 
         private void titleText_TextChanged(object sender, EventArgs e)
         {
@@ -116,6 +120,11 @@ namespace Project1
         private void manageClassButton_Click(object sender, EventArgs e)
         {
             LoadFormQLLH();
+        }
+
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

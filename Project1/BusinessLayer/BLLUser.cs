@@ -24,9 +24,14 @@ namespace Project1.BusinessLayer
             //if (userDao.ListUser.Count == 0)
             //    userDao = new UserDao();
 
+            if  (taiKhoan == "admin" && matKhau == "admin")
+            {
+                return userDao.adminUser;
+            }
+
             foreach (User user in userDao.ListUser)
             {
-                if (user.TaiKhoan.Equals(taiKhoan) && user.MatKhau.Equals(matKhau))
+                if (user.MSSV.Equals(taiKhoan) && user.MatKhau.Equals(matKhau))
                     return user;
             }
             return null;

@@ -69,6 +69,7 @@ namespace Project1
             user.TaiKhoan = this.textClassName.Text;
             user.MatKhau = this.textPassword.Text;
             user.HoVaTen = this.textName.Text;
+            user.MSSV = this.txtMSSV.Text;
             user.NhoMatKhau = this.chkMatKhau.Checked;
 
             if (isEditting)
@@ -78,7 +79,18 @@ namespace Project1
             }
             else
             {
+                ClassDao classDao = new ClassDao(Main.Instance.classDataPath);
+                int index = classDao.GetClassIndexByName(user.TaiKhoan);
+                if (index < 0)
+                {
+                    MessageBox.Show("Lop khong ton tai");
+                    return;
+                }
+
+                classDao.ListClass[index].SetSiSo(classDao.ListClass[index].GetSiSo() + 1);
+                classDao.SaveListClass(classDao.ListClass);
                 bLLUser.userDao.AddUser(user);
+
             }
 
             if (this.data != null)
@@ -87,6 +99,11 @@ namespace Project1
             }
 
             this.Close();
+        }
+
+        private void textClassName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

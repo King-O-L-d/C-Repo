@@ -41,6 +41,12 @@ namespace Project1
 
         private void ActionAdd_Click(object sender, EventArgs e)
         {
+            if (!Main.Instance.IsAdmin())
+            {
+                MessageBox.Show("Khong co quyen");
+                return;
+            }
+
             FrmQuanLySV_Modifiles frmThem = new FrmQuanLySV_Modifiles(this);
             frmThem.isEditting = false;
             frmThem.ShowDialog();
@@ -70,6 +76,12 @@ namespace Project1
 
         private void actionUpdate_Click(object sender, EventArgs e)
         {
+            if (!Main.Instance.IsAdmin())
+            {
+                MessageBox.Show("Khong co quyen");
+                return;
+            }
+
             if (selectedUser == null)
             {
                 MessageBox.Show("Hãy chọn 1 user");
@@ -84,6 +96,12 @@ namespace Project1
 
         private void actionDelete_Click(object sender, EventArgs e)
         {
+            if (!Main.Instance.IsAdmin())
+            {
+                MessageBox.Show("Khong co quyen");
+                return;
+            }
+
             if (selectedUser == null)
             {
                 MessageBox.Show("Hãy chọn 1 user");

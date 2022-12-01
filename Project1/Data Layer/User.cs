@@ -15,22 +15,35 @@ namespace Project1.Data_Layer
         private string matKhau;
         private string hoVaTen;
         private bool nhoMatKhau;
+        private string mssv;
 
-        public User(string taiKhoan, string matKhau, string hoVaTen, bool nhoMatKhau)
+        public User(string taiKhoan, string mssv, string matKhau, string hoVaTen, bool nhoMatKhau)
         {
             this.iD = 0;
             this.taiKhoan = taiKhoan;
             this.matKhau = matKhau;
             this.hoVaTen = hoVaTen;
             this.nhoMatKhau = nhoMatKhau;
+            this.mssv = mssv;
         }
-        public User()
+        public User(bool isAdmin = false)
         {
             this.iD = 0;
             this.taiKhoan = "";
             this.matKhau = "";
             this.hoVaTen = "";
             this.nhoMatKhau = false;
+            this.mssv = "";
+
+            if (isAdmin)
+            {
+                this.iD = 0;
+                this.taiKhoan = "admin";
+                this.matKhau = "admin";
+                this.hoVaTen = "admin";
+                this.nhoMatKhau = false;
+                this.mssv = "";
+            }
         }
 
         public User(string taiKhoan, string matKhau)
@@ -40,6 +53,7 @@ namespace Project1.Data_Layer
             this.matKhau = matKhau;
             this.hoVaTen = "";
             this.nhoMatKhau = false;
+            this.mssv = "";
         }
 
         //Properties
@@ -64,6 +78,18 @@ namespace Project1.Data_Layer
                 matKhau = value;
             }
         }
+        public string MSSV
+        {
+            get
+            {
+                return mssv;
+            }
+            set
+            {
+                mssv = value;
+            }
+        }
+
         public string HoVaTen 
         {
             get { return hoVaTen; } 

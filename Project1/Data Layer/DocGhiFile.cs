@@ -37,7 +37,8 @@ namespace Project1.Data_Layer
                             user.TaiKhoan = mang[1];
                             user.MatKhau = mang[2];
                             user.HoVaTen = mang[3];
-                            user.NhoMatKhau = Convert.ToBoolean(mang[4]);
+                            user.MSSV = mang[4];
+                            //user.NhoMatKhau = Convert.ToBoolean(mang[4]);
                             users.Add(user);//Them user vao danh sach
                         }
                     }
@@ -61,7 +62,7 @@ namespace Project1.Data_Layer
                         foreach (User item in users)
                         {
                             // item.GhiUser(streamWrite);
-                            streamWrite.WriteLine(string.Format("{0},{1},{2},{3},{4}", item.ID, item.TaiKhoan, item.MatKhau, item.HoVaTen, item.NhoMatKhau));
+                            streamWrite.WriteLine(string.Format("{0},{1},{2},{3},{4},{5}", item.ID, item.TaiKhoan, item.MatKhau, item.HoVaTen, item.MSSV, item.NhoMatKhau));
                         }
 
                         streamWrite.Close();
@@ -95,6 +96,7 @@ namespace Project1.Data_Layer
                             lop = new Class();//khoi tao mot user
                                               // users.Add(user.DocUser(line));
                             string[] mang = line.Split(',');
+                            lop.ID = Int64.Parse(mang[0]);
                             lop.SetTenLop(mang[1]);
                             lop.SetSiSo(Int32.Parse(mang[2]));
                             lopHoc.Add(lop);//Them user vao danh sach

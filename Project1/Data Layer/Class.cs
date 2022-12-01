@@ -8,50 +8,50 @@ namespace Project1.Data_Layer
 {
     public class Class
     {
-        private long ID;
-        private string tenLop;
-        private int siSo;
+        public long ID { get; set; }
+        public string ClassName { get; set; }
+        public int SiSo { get; set; }
 
-        public long GetId()
+    public long GetId()
         {
             return ID;
         }
 
         public void SetTenLop(string name)
         {
-            this.tenLop = name;
+            this.ClassName = name;
         }
 
         public string GetTenLop()
         {
-            return tenLop;
+            return ClassName;
         }
 
         public void SetSiSo(int siso)
         {
-            this.siSo = siso;
+            this.SiSo = siso;
         }
 
         public int GetSiSo()
         {
-            return siSo;
+            return SiSo;
         }
 
         public Class(string tenLop, int siSo)
         {
             ID = GenerateID();
-            this.tenLop = tenLop;
-            this.siSo = siSo;
+            this.ClassName = tenLop;
+            this.SiSo = siSo;
         }
 
         public Class()
         {
-            ID = GenerateID();
-            this.tenLop = "";
-            this.siSo = 0;
+            ID = 0;
+            this.ClassName = "";
+            this.SiSo = 0;
         }
 
-        private long GenerateID()
+        public long GenerateID()
         {
             return DateTimeOffset.Now.ToUnixTimeMilliseconds();
         }

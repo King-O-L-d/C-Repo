@@ -64,6 +64,7 @@ namespace Project1
         {
             Class user = new Class();
             user.SetTenLop(this.textUserName.Text) ;
+            user.ID = user.GenerateID();
 
             if (isEditting)
             {

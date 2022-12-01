@@ -86,12 +86,6 @@
     <Compile Include="FrmQuanLySV_Modifiles.Designer.cs">
       <DependentUpon>FrmQuanLySV_Modifiles.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_XuLiNgonNgu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Frm_XuLiNgonNgu.Designer.cs">
-      <DependentUpon>Frm_XuLiNgonNgu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,9 +114,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmQuanLySV_Modifiles.resx">
       <DependentUpon>FrmQuanLySV_Modifiles.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_XuLiNgonNgu.resx">
-      <DependentUpon>Frm_XuLiNgonNgu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

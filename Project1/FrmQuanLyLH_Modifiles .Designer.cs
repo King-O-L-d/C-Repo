@@ -90,6 +90,7 @@
             this.textPassword.Location = new System.Drawing.Point(161, 168);
             this.textPassword.Margin = new System.Windows.Forms.Padding(7);
             this.textPassword.Name = "textPassword";
+            this.textPassword.ReadOnly = true;
             this.textPassword.Size = new System.Drawing.Size(342, 23);
             this.textPassword.TabIndex = 5;
             // 
